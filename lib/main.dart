@@ -57,7 +57,7 @@ class App extends StatelessWidget {
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
-              )
+              ),
             ],
           ),
         ),
