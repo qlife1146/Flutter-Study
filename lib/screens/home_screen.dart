@@ -11,7 +11,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  static const twentyFiveMinutes = 10;
+  static const twentyFiveMinutes = 1500;
   int totalSecond = twentyFiveMinutes;
   bool isRunning = false;
   int totalPomodoros = 0;
