@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test/screens/home_screen.dart';
+
+import 'screens/home_screen_pomodoro.dart';
 
 //COLOR
 //red:   #E7626C

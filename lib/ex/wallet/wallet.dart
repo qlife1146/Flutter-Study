@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test/widgets/button.dart';
-import 'package:test/widgets/card.dart';
+import 'package:test/ex/wallet/widgets/button.dart';
+import 'package:test/ex/wallet/widgets/card.dart';
 
 void main() {
   runApp(App());
