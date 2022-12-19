@@ -6,7 +6,7 @@ import 'package:vibration/vibration.dart';
 //일하는 시간(25분)과 쉬는 시간(5분)을 번갈아 나오게 변형.
 //25분 -> 5분 -> 25분 -> 5분 ...
 //리셋 버튼을 누르면 일한 횟수는 0으로 시간은 일하는 시간(25분)으로 초기화.
-//일하는 시간과 쉬는 시간이 끝나면 진동 알림 추가.
+//패키지를 찾아넣어 일하는 시간과 쉬는 시간이 끝나면 진동 알림 추가.
 //시작/일시정지 버튼을 누를 때 터치 피드백 추가.
 
 class HomeScreen extends StatefulWidget {
@@ -21,15 +21,16 @@ class _HomeScreenState extends State<HomeScreen> {
   static const fiveMinutes = 300;
   int totalSecond = twentyFiveMinutes;
   bool isRunning = false;
-  int totalPomodoros = 0;
-  int breakPomodoros = 0;
-  late Timer timer; //지금 초기화할 필요는 없지만 사용할 때는 꼭 초기화해야 함
+  int workPomodoros = 0;
+  int breakPomodoros = 0;//쉬는 횟수 변수도 추가해 일한 횟수와 비교하여
+  //일->휴식이 핑퐁하도록 유도.
+  late Timer timer; //late = 지금 초기화할 필요는 없지만 사용할 때는 꼭 초기화해야 함
 
   void onTick(Timer timer) {
     setState(() {
       if (totalSecond == 0) {
-        if (breakPomodoros == totalPomodoros) {
-          totalPomodoros = totalPomodoros + 1;
+        if (breakPomodoros == workPomodoros) {
+          workPomodoros = workPomodoros + 1;
           totalSecond = fiveMinutes;
         } else {
           breakPomodoros = breakPomodoros + 1;
@@ -63,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       timer.cancel();
       isRunning = false;
-      totalPomodoros = 0;
+      workPomodoros = 0;
       breakPomodoros = 0;
       totalSecond = twentyFiveMinutes;
     });
@@ -157,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Text(
-                          "$totalPomodoros",
+                          "$workPomodoros",
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 60,

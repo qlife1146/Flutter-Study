@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
+//counter 기능을 통해 flutter에서 할 수 있는 것들을 배움.
+//강의 내용 외에 카운터를 내리는 기능과 리셋을 추가.
+
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatefulWidget {
+  const App({super.key});
+
   @override
   State<StatefulWidget> createState() => _AppState();
 }

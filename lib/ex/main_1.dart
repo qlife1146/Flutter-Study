@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+//가장 기초적인 내용과 구조에 대해 배움.
+//아래 주석에 설명 참조.
+
 void main() {
   runApp(App()); //App 위젯(클래스)을 실행. App 위젯이 root.
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'screens/home_screen_pomodoro.dart';
+
+//뽀모도로 타이머를 만들어 봄.
+//주요 기능은 pomodoro/screens/home_screen_pomodoro에 참조.
 
 //COLOR
 //red:   #E7626C

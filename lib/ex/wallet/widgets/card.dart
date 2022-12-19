@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+
 //button.dart를 토대로 직접 만들어 본 card.dart
+//좀 더 많은 옵션을 넣어 작성에 편의성을 높이려고 함.
+//아래 주석을 참조.
 
 enum CardColor { black, white }
 

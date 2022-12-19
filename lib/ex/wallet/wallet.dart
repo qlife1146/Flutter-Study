@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:test/ex/wallet/widgets/button.dart';
 import 'package:test/ex/wallet/widgets/card.dart';
 
+//앱 디자인 사이트와 강의를 토대로 작성한 앱 지갑 디자인.
+//아래 주석을 참조.
+
 void main() {
   runApp(App());
 }
@@ -18,7 +21,7 @@ class App extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 50, //margin(?) 역할
+                height: 50, //보이지 않는 박스를 구조 배치에 활용
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end, //row를 오른쪽으로(row 메인: 좌우, 크로스: 상하)
@@ -46,7 +49,8 @@ class App extends StatelessWidget {
                     ],
                   ),
                   // SizedBox(
-                  //   width: 10, //스스로 오른쪽 margin이 부족하다 여겨서 추가. 하지만 padding widget의 존재를 알고 수정
+                  //   width: 10, //스스로 오른쪽 margin이 부족하다 여겨서 추가.
+                  //하지만 padding widget의 존재를 알고 수정
                   // ),
                 ],
               ),

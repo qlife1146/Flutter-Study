@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+//클래스를 나누어 작성.
+//아래 주석을 참조.
+
 class Button extends StatelessWidget {
   final String text;
   final Color bgColor;

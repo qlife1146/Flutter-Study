@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
+//Theme를 이용해 context의 역할을 배움.
+//하단에 주석 참조.
+
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatefulWidget {
+  const App({super.key});
+
   @override
   State<StatefulWidget> createState() => _AppState();
 }
@@ -53,7 +58,7 @@ class MyLargeTitle extends StatelessWidget {
         color: Theme.of(context).textTheme.titleLarge!.color, //null safety
         //MaterialApp에서 작성한 textTheme를 context로 가져오는 것.
         //Theme.of(context)는 context 이름을 가진 가장 가까운 Theme를 탐색하는데
-        //뭔가 html 크롤링하는 것 같기도.
+        //html 파싱하는 것 같은 모양새.
       ),
     );
   }
